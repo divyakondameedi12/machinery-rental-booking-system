@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-earth-800 font-body antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-tractor-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-tractor-600 hover:shadow-lg active:scale-95;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-earth-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-earth-700 hover:shadow-lg active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-earth-600 bg-transparent px-6 py-3 text-sm font-semibold text-earth-700 transition-all hover:bg-earth-600 hover:text-white active:scale-95;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-card transition-all duration-300;
+  }
+  .section-title {
+    @apply text-3xl font-bold text-earth-800 sm:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-3 text-base text-earth-600 sm:text-lg;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-earth-200 bg-cream-50 px-4 py-3 text-sm text-earth-800 placeholder-earth-300 transition-colors focus:border-earth-500 focus:outline-none focus:ring-2 focus:ring-earth-200;
+  }
+  .label-field {
+    @apply mb-1.5 block text-sm font-semibold text-earth-700;
+  }
+}
